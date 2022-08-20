@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p>Con tho</p>
+        <p>Con meo</p> 
+        <p>Con ga</p>
+        <span>Hoa hong</span>
+        <span>Hoa lai</span>
+        <span>Hoa mai</span>
+        <span>Hoa dao</span>
+
+        <div class="hoaDongTien">
+            Hoa dong tien
+        </div>
+
+        <button onclick="changeColor()">Change Color</button><br>
+        <label>Nhap X</label> <input type="number"><br>
+        <label>Nhap Y</label> <input type="number"><br>
+        <label>Ket Qua</label> <input type="number"><br>
+        <button onclick="cong()">Cong</button>
+        <button onclick="tru()">Tru</button>
+        <button onclick="nhan()">Nhan</button>
+        <button onclick="chia()">Chia</button><br>
+
+        <button onclick="changBackground('red')">Red</button>
+        <button onclick="changBackground('green')">Green</button>
+        <button onclick="changBackground('orange')">Orange</button>
+        <button onclick="changBackground('yellow')">Yellow</button><br>
+
+        <button onclick="changBackground1('green', 'yellow')">linear-gradient</button><br>
+       
+        <button id="changeButtonColor">
+            Change Button Color
+        </button>
+    </div>
+   
+
+
+    
+    <script>
+        // var span = document.getElementsByTagName("span");
+
+        // for(var i=0; i<span.length; i++){
+        //     alert(span[i].innerHTML);
+        // }
+
+        var hoaHong = document.querySelector("span")
+        // querySelector chỉ lấy giá trị đầu tiên
+        var p = document.getElementsByTagName("p")
+        var hoaDongTien = document.querySelector(".hoaDongTien");
+        
+        // alert(hoaHong.innerHTML)
+        // alert(p[0].innerHTML)
+        // alert(hoaDongTien.innerHTML)
+        
+        var input = document.getElementsByTagName("input")
+        // var inputY = document.getElementsByTagName("input")[1].value
+        // var ketQua = document.getElementsByTagName("input")[2].value
+
+        var contianer = document.getElementById("container");
+
+        function changeColor(){
+            contianer.style.background = "red";
+        }
+
+        function cong(){
+           input[2].value = parseInt(input[0].value) + parseInt(input[1].value);
+           // để .value bên ngoài sẽ ko lưu giá trị (line 53 54)
+        }
+
+        function tru(){
+           input[2].value = parseInt(input[0].value) - parseInt(input[1].value);
+        }
+
+        function nhan(){
+           input[2].value = parseInt(input[0].value) * parseInt(input[1].value);
+        }
+
+        function chia(){
+            var ketQua = parseInt(input[0].value) / parseInt(input[1].value);
+            input[2].value = ketQua.toFixed(2);
+        //    toFixed : làm tròn số thực
+           
+        }
+
+        function changBackground(color){
+            contianer.style.background = color;
+        }
+
+        function changBackground1(color1, color2){
+            contianer.style.background = 'linear-gradient('+color1+', '+color2+')';
+        }
+        
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

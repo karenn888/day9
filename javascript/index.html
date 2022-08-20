@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .active{
+            width: 400px;
+            height: 300px;
+            background-color: orange;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .center{
+            margin: 0 auto;
+        }
+
+        .btn{
+           padding: 10px 20px; 
+           
+        }
+    </style>
+    <title>JavaScript</title>
+</head>
+<body>
+    <p id="demo">
+        Count: 0
+    </p>
+    <button id="clickMe">
+        Click Me
+    </button>
+
+    <div id="meo">
+    </div>
+    <div id="cho">
+        hi
+    </div>
+
+    
+
+    <script>
+        var name = "Bich Xuyen" 
+        // string
+        var fontsize = 35
+        // int
+        var isGraduated = false 
+        // boolean
+
+        // var textColor = "red"
+        // var background = "green"
+        // var fontFamily = "Impact,Charcoal,sans-serif"
+        // var pTag = document.getElementById("demo")
+        // var meo = document.getElementById("meo")
+        // var width = "400px"
+        // var height = "100"
+        // var backgroundMeo = "yellow"
+        // var cho = document.getElementById("cho")
+
+        // pTag.innerHTML = name
+        // pTag.style.fontSize = fontsize + "px"
+        // pTag.style.color = textColor
+        // pTag.style.background = background
+        // pTag.style.fontFamily = fontFamily
+
+        // meo.style.width = width
+        // meo.style.height = height * 2 + "px"
+        // meo.style.background = backgroundMeo
+
+        // cho.classList.add('active', 'center')
+        // // ('class 1', 'class 2',..., 'class n')
+        // cho.style.textTransform = "uppercase"
+
+        // function
+        var btn = document.getElementById("clickMe")
+        var demo = document.getElementById("demo")
+        var count = 0
+
+        btn.addEventListener("click", function(){
+            // count = count + 1
+            ++count
+            demo.innerHTML = "Count: " + count
+        })
+
+        btn.classList.add('btn')
+        
+    </script>
+</body>
+</html>
